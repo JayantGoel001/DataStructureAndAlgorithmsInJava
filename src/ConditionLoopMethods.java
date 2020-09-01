@@ -24,14 +24,15 @@ public class ConditionLoopMethods {
 
     private static boolean prime(int n) {
         boolean[] ar = new boolean[n+1];
-
-        for(int i=0;i<=n;i++){
-            for (int j=i*i;j<=n+1;j+=i){
-                ar[i] = true;
+        for(int i=2;i*i<=n;i++){
+            if(!ar[i]) {
+                for (int j = i * i; j <= n; j += i) {
+                    ar[j] = true;
+                }
             }
         }
 
-        return ar[n];
+        return !ar[n];
     }
 
 
