@@ -9,5 +9,10 @@ public class ConditionLoopMethods {
         } else {
             System.out.println("Ordinary Year");
         }
+
+        int n = sc.nextInt();
+        for(int i=0;i<n;i++){
+            System.out.println(i);
+        }
     }
 }
