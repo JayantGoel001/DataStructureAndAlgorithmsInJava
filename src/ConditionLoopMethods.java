@@ -13,6 +13,26 @@ public class ConditionLoopMethods {
         int n = sc.nextInt();
         for(int i=0;i<n;i++){
             System.out.println(i);
+            i+=Math.random()*10;
+        }
+        if(prime(n)) {
+            System.out.println("Prime Number");
+        }else {
+            System.out.println("Not A Prime Number");
         }
     }
+
+    private static boolean prime(int n) {
+        boolean[] ar = new boolean[n+1];
+
+        for(int i=0;i<=n;i++){
+            for (int j=i*i;j<=n+1;j+=i){
+                ar[i] = true;
+            }
+        }
+
+        return ar[n];
+    }
+
+
 }
