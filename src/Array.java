@@ -12,5 +12,15 @@ public class Array {
             System.out.println(num);
         }
         System.out.println(Arrays.toString(ar));
+        System.out.println(linearSearch(ar,5));
     }
+    public static int linearSearch(int[] ar, int key){
+        for (int i=0;i<ar.length;i++){
+            if (ar[i]==key){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
 }
