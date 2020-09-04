@@ -11,14 +11,11 @@ public class Sorting {
         for(int i=0;i<ar.length;i++){
             for (int j=i+1;j<ar.length-1-i;j++){
                 if(ar[j]>ar[j+1]){
-                    swap(ar[j],ar[j+1]);
+                    ar[j] = ar[j] + ar[j+1];
+                    ar[j+1] = ar[j] - ar[j+1];
+                    ar[j] = ar[j] - ar[j+1];
                 }
             }
         }
-    }
-    public static void swap(int x,int y){
-        x = x+y;
-        y = x-y;
-        x = x-y;
     }
 }
