@@ -11,4 +11,11 @@ public class Hostler {
             System.out.println("No Party");
         }
     }
+
+    public void getLoan(Hostler dost){
+        if (dost.money>=500){
+            dost.money -=500;
+            this.money+=500;
+        }
+    }
 }

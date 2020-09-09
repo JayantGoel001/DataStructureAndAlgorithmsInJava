@@ -14,6 +14,9 @@ public class Client {
         kriti.party();
         kriti.party();
         kriti.party();
+
+        Hostler mohit = new Hostler();
+
         System.out.println(kriti.money);
 
     }
