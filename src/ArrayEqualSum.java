@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class ArrayEqualSum {
     public static void main(String[] args) {
-        int[] ar = {1,2,4,7,2,1,8,6,1,7};
+        int[] ar = {1,2,3,4,10};
         ArrayList<Integer> arrayList1 = new ArrayList<>();
         ArrayList<Integer> arrayList2 = new ArrayList<>();
         equalSum(ar,arrayList1,arrayList2,0,0,0);
@@ -12,8 +12,7 @@ public class ArrayEqualSum {
     public static void equalSum(int[] ar,ArrayList<Integer> arrayList1,ArrayList<Integer> arrayList2,int fsum,int ssum,int index){
         if (index==ar.length){
             if (fsum == ssum){
-                System.out.println(arrayList1);
-                System.out.println(arrayList2);
+                System.out.println(arrayList1 + ":" + arrayList2);
             }
             return;
         }
@@ -26,6 +25,6 @@ public class ArrayEqualSum {
 
         arrayList2.add(item);
         equalSum(ar,arrayList1,arrayList2,fsum,ssum+item,index+1);
-        arrayList2.remove(item);
+        arrayList2.remove(arrayList2.size()-1);
     }
 }
