@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class ArrayEqualSum {
@@ -9,8 +11,8 @@ public class ArrayEqualSum {
 
     }
 
-    public static void equalSum(int[] ar,ArrayList<Integer> arrayList1,ArrayList<Integer> arrayList2,int fsum,int ssum,int index){
-        if (index==ar.length){
+    public static void equalSum(int @NotNull [] ar, ArrayList<Integer> arrayList1, ArrayList<Integer> arrayList2, int fsum, int ssum, int index){
+        if (index == ar.length){
             if (fsum == ssum){
                 System.out.println(arrayList1 + ":" + arrayList2);
             }
