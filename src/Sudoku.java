@@ -11,10 +11,7 @@ public class Sudoku {
             {0, 0, 0, 0, 0, 0, 0, 7, 4},
             {0, 0, 5, 2, 0, 6, 3, 0, 0}
         };
-
         sudoku(board,0,0);
-
-
     }
 
     public static void sudoku(int[][] board,int row,int col){
