@@ -1,9 +1,16 @@
 package Inheritance;
 
 public class Vehicle {
-    public static int wheels;
+    protected int wheels;
 
-    public static void start(){
+    public void start(){
         System.out.println("Start Like general vehicle.");
+        System.out.println(this.wheels);
+    }
+    Vehicle(int wheels){
+        this.wheels = wheels;
+    }
+    Vehicle(){
+        this.wheels = 2;
     }
 }
