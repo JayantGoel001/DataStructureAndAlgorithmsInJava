@@ -1,13 +1,8 @@
-package Abstraction;
+package Polymorphism;
 
 public class Client {
     public static void main(String[] args) {
-        Animal a = new Animal() {
-            @Override
-            public void sound() {
-                System.out.println("WEEE-WEEEE");
-            }
-        };
+        Animal a = new Animal();
         a.sound();
         Dog dog = new Dog();
         dog.sound();
