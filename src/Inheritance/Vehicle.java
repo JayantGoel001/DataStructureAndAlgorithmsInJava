@@ -1,7 +1,7 @@
 package Inheritance;
 
 public class Vehicle {
-    protected int wheels;
+    private int wheels;
 
     public void start(){
         System.out.println("Start Like general vehicle.");
@@ -12,5 +12,12 @@ public class Vehicle {
     }
     Vehicle(){
         this.wheels = 2;
+    }
+
+    public int getWheels() {
+        return wheels;
+    }
+    public void setWheels(int wheels){
+        this.wheels = wheels;
     }
 }
