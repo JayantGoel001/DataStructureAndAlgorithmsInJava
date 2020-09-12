@@ -1,4 +1,4 @@
-package Inheritance;
+package Abstraction;
 
 public abstract class Animal {
     public void birth(){

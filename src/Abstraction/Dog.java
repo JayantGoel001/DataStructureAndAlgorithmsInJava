@@ -1,4 +1,4 @@
-package Inheritance;
+package Abstraction;
 
 public class Dog extends Animal {
     @Override

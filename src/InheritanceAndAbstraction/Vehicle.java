@@ -1,4 +1,4 @@
-package Inheritance;
+package InheritanceAndAbstraction;
 
 public class Vehicle {
     private int wheels;
