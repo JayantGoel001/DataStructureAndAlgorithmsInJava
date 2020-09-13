@@ -1,17 +1,15 @@
 package StackIntro;
 
-import java.util.Objects;
-
 public class Stack<T> {
     protected T[] ar;
     protected int top;
     public Stack(){
         top=-1;
-        ar = (T[]) new Objects[10];
+        ar = (T[]) new Object[10];
     }
     public Stack(int size){
         top=-1;
-        ar = (T[])new Objects[size];
+        ar = (T[])new Object[size];
     }
     public void push(T ele){
         if (isFull()){
@@ -19,7 +17,7 @@ public class Stack<T> {
             return;
         }
 
-        this.ar[++top] = ele;
+        ar[++top] = ele;
     }
 
     public boolean isFull() {
@@ -41,6 +39,6 @@ public class Stack<T> {
         return ar[top];
     }
     boolean empty(){
-        return top == 0;
+        return top < 0;
     }
 }
