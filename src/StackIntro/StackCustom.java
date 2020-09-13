@@ -1,10 +1,8 @@
 package StackIntro;
 
-import java.util.Stack;
-
-public class StackIntro {
+public class StackCustom {
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack =new Stack<Integer>();
         for (int i = 0; i < 10; i++) {
             stack.push(i*i*i);
         }
@@ -14,7 +12,6 @@ public class StackIntro {
             System.out.println(stack.pop());
         }
         System.out.println("\n"+stack.empty());
-
 
     }
 }
