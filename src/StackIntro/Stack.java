@@ -3,8 +3,8 @@ package StackIntro;
 import java.util.Objects;
 
 public class Stack<T> {
-    private final T[] ar;
-    private int top;
+    protected T[] ar;
+    protected int top;
     public Stack(){
         top=-1;
         ar = (T[]) new Objects[10];
