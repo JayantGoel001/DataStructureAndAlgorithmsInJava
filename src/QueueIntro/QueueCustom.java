@@ -45,11 +45,11 @@ public class QueueCustom {
             queue2.remove();
         }
         for (int i = 0; i < 10; i++) {
-            queue2.add(11+i);
+            queue2.add(16+i);
         }
 
         for (int i = 0; i < 20; i++) {
-            System.out.println(queue1.peek());
+            System.out.println(queue2.peek());
             queue2.remove();
         }
 
