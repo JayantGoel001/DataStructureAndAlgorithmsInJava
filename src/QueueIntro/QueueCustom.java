@@ -1,10 +1,8 @@
 package QueueIntro;
-import java.util.LinkedList;
-import java.util.Queue;
 
-public class QueueIntro {
+public class QueueCustom {
     public static void main(String[] args) {
-        Queue<Integer> queue = new LinkedList<>();
+        Queue<Integer> queue = new Queue<Integer>();
 
         for (int i = 0; i <10 ; i++) {
             queue.add(i*i);
