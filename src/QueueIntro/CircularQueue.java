@@ -1,7 +1,7 @@
 package QueueIntro;
 
 public class CircularQueue<T> {
-    private final T[] ar;
+    T[] ar;
     int front = 0;
     int end = -1;
     int size = 0;
@@ -45,7 +45,7 @@ public class CircularQueue<T> {
         return  size==0;
     }
 
-    private boolean isFull() {
+    boolean isFull() {
         return size==ar.length;
     }
 
