@@ -42,9 +42,12 @@ public class Queue<T> {
         if (isEmpty()){
             return;
         }
-        T temp = this.ar[0];
         for (int i = 0; i < end; i++) {
             this.ar[i] = this.ar[i+1];
         }
+        end--;
+    }
+    int size(){
+        return end+1;
     }
 }
