@@ -39,18 +39,57 @@ public class LinkedListCustom {
         tail = node;
         size++;
     }
+
+    public Integer deleteAtFirst(){
+        if (size==0){
+            return null;
+        }
+        int temp = head.data;
+        head = head.next;
+        size--;
+        if (size==0){
+            tail=null;
+        }
+        return temp;
+    }
+
+    public Integer deleteLast(){
+        if (size<=1){
+            return deleteAtFirst();
+        }
+        Node node = head;
+        while (node.next!=tail){
+            node = node.next;
+        }
+        int temp = node.data;
+        tail = node;
+        node.next = null;
+        size--;
+        return temp;
+    }
     public void display(){
         Node temp = head;
         while (temp!=null){
-            System.out.println(head.data+" ");
+            System.out.print(temp.data+" ");
             temp=temp.next;
         }
-
+        System.out.println();
     }
     public static void main(String[] args) {
         LinkedListCustom linkedListCustom = new LinkedListCustom();
         linkedListCustom.insertAtFirst(2);
         linkedListCustom.insertAtFirst(5);
         linkedListCustom.display();
+
+        linkedListCustom.insertAtLast(3);
+        linkedListCustom.insertAtLast(4);
+        linkedListCustom.display();
+
+        linkedListCustom.deleteLast();
+        linkedListCustom.display();
+
+        linkedListCustom.deleteAtFirst();
+        linkedListCustom.display();
+
     }
 }
