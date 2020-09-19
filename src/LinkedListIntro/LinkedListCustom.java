@@ -6,10 +6,7 @@ public class LinkedListCustom {
     static class Node{
         int data;
         Node next;
-        Node(){
-            data=0;
-            next=null;
-        }
+
         Node(int data){
             this.data = data;
             next = null;
@@ -40,32 +37,29 @@ public class LinkedListCustom {
         size++;
     }
 
-    public Integer deleteAtFirst(){
+    public void deleteAtFirst(){
         if (size==0){
-            return null;
+            return;
         }
-        int temp = head.data;
         head = head.next;
         size--;
         if (size==0){
             tail=null;
         }
-        return temp;
     }
 
-    public Integer deleteLast(){
+    public void deleteLast(){
         if (size<=1){
-            return deleteAtFirst();
+            deleteAtFirst();
+            return;
         }
         Node node = head;
         while (node.next!=tail){
             node = node.next;
         }
-        int temp = node.data;
         tail = node;
         node.next = null;
         size--;
-        return temp;
     }
     public void display(){
         Node temp = head;
@@ -123,8 +117,5 @@ public class LinkedListCustom {
         linkedListCustom.insertAtFirst(9);
         linkedListCustom.tail.next = linkedListCustom.head;
         System.out.println("Cycle Detection : "+linkedListCustom.cycleDetection());
-
-
-
     }
 }
