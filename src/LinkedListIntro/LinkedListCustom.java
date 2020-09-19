@@ -113,9 +113,10 @@ public class LinkedListCustom {
 
         linkedListCustom.deleteLast();
         linkedListCustom.display();
-
         linkedListCustom.deleteAtFirst();
+
         linkedListCustom.display();
+        linkedListCustom.insertAtFirst(1);
         System.out.println("Mid:"+linkedListCustom.mid());
         System.out.println("Cycle Detection : "+linkedListCustom.cycleDetection());
         linkedListCustom.insertAtFirst(6);
