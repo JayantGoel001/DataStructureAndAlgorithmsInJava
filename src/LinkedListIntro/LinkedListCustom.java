@@ -75,6 +75,32 @@ public class LinkedListCustom {
         }
         System.out.println();
     }
+
+    public int mid(){
+        Node first = head;
+        Node second = head;
+        while (first!=null && second!=null && second.next!=null){
+            first = first.next;
+            second = second.next.next;
+        }
+        return first.data;
+    }
+
+    public boolean cycleDetection(){
+        if (size<3){
+            return false;
+        }
+        Node slow = head;
+        Node fast = head.next.next;
+        while (slow!=null && fast!=null && fast.next!=null){
+            if (slow==fast){
+                return true;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return false;
+    }
     public static void main(String[] args) {
         LinkedListCustom linkedListCustom = new LinkedListCustom();
         linkedListCustom.insertAtFirst(2);
@@ -90,6 +116,14 @@ public class LinkedListCustom {
 
         linkedListCustom.deleteAtFirst();
         linkedListCustom.display();
+        System.out.println("Mid:"+linkedListCustom.mid());
+        System.out.println("Cycle Detection : "+linkedListCustom.cycleDetection());
+        linkedListCustom.insertAtFirst(6);
+        linkedListCustom.insertAtFirst(9);
+        linkedListCustom.tail.next = linkedListCustom.head;
+        System.out.println("Cycle Detection : "+linkedListCustom.cycleDetection());
+
+
 
     }
 }
